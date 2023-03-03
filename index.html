@@ -1,0 +1,133 @@
+<!--
+Minimum Features: 
+-	navigation (done)
+-	body of text 
+-	form (done)
+-	table of data
+-	digital images including a background image (done)
+-	digital video 
+-	external widget or app (iframed)
+-	copyright, privacy statement, contact, terms and conditions
+Additional features for persona based off user stories:
+-	Announcement Board (CEO/Board Members)
+-	Social Media Informatics (marketing)
+-	Financial Informatics which can be imported (finance) 
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="body">
+      <!--NAV BAR-->
+      <div class="navbar">
+        <div class="navbar-brand">
+          <!--Logo-->
+          <a class="navbar-item">
+            <img src="./assets/Logo.png" width="50" height="50" />
+          </a>
+          <!--Nav Links-->
+          <div class="navbar-start">
+            <a class="navbar-item"> Announcements </a>
+            <a class="navbar-item"> Marketing </a>
+            <a class="navbar-item"> Finanace </a>
+            <a class="navbar-item"> FAQ </a>
+          </div>
+          <span>
+            <button>Login</button>
+            <button>Sign Up</button>
+          </span>
+        </div>
+      </div>
+      <!-- Landing Page Image/Video-->
+      <div class="landingpage">
+        <div class="hero">
+          <figure class="banner">
+            <img src="./assets/Takedown Titans.png" />
+          </figure>
+        </div>
+        <!-- Local Fights (images)-->
+        <div class="localfights">
+          <figure>
+            <img src="./assets/UFC fight.png" />
+          </figure>
+          <figure>
+            <img src="./assets/UFC_Fight_2.png" />
+          </figure>
+        </div>
+        <!--Advertising Banner-->
+        <div class="advertisingbanner">
+          <span>
+            <p>Advertisement</p>
+          </span>
+        </div>
+      </div>
+
+      <!-- Announcements -->
+      <div class="announcements">
+        <div class="postbox">
+          <h2>Announcements</h2>
+        </div>
+        <div class="pastannouncementbox">
+          <!--Need to add a form when you create a post-->
+          <h2>Past Announcements</h2>
+          <div class="container">
+            <div class="content">
+              <h2>Content</h2>
+            </div>
+          </div>
+          <button>+</button>
+        </div>
+      </div>
+
+      <!--Marketing-->
+      <div class="marketing">
+        <div class="section">
+          <div class="container">
+            <div class="content">
+              <div class="statistics">
+                <table class="members table"></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finanacial -->
+      <div class="financial">
+        <div class="section">
+          <div class="container">
+            <div class="content">
+              <div class="statistics">
+                <table class="members table"></table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--About Us (Body of text & Video Introduction)-->
+      <div class="aboutus">
+        <div class="container">
+          <video>
+            <!--Introduction video-->
+          </video>
+        </div>
+        <div class="box">
+          <div class="content">
+            <h2>About Us</h2>
+            <p>Introduction to site</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
