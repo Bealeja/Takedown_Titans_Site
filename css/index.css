@@ -3,6 +3,7 @@
   min-height: 3.25rem;
   position: relative;
   z-index: 30;
+  width: 100%;
 }
 .navbar-brand {
   align-items: stretch;
@@ -10,19 +11,26 @@
   flex-shrink: 0;
   min-height: 3.25rem;
 }
-
-.navbar,
-.navbar-end,
-.navbar-menu,
 .navbar-start {
+  justify-content: flex-start;
+  margin-right: auto;
   align-items: stretch;
   display: flex;
 }
+.navbar-end {
+  justify-content: flex-end;
+  margin-left: auto;
+  align-items: stretch;
+  display: flex;
+}
+.navbar.is-spaced {
+  padding: 1rem 2rem;
+}
 
-.navbar-brand .navbar-item,
-.navbar-tabs .navbar-item {
+.navbar-item {
   align-items: center;
   display: flex;
+  padding: 0px 10px;
 }
 
 .container {
@@ -35,16 +43,4 @@
 .section {
   padding: 3rem 1.5rem;
   display: block;
-}
-
-.navbar-start {
-  justify-content: flex-start;
-  margin-right: auto;
-  align-items: stretch;
-  display: flex;
-}
-
-.navbar-item {
-  flex-grow: 0;
-  flex-shrink: 0;
 }
