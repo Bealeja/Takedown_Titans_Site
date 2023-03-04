@@ -29,7 +29,6 @@
 
 .box {
   margin: 1rem;
-  background-color: black;
   display: inline-block;
   width: 50%;
   text-align: center;
@@ -44,6 +43,7 @@
 
 .gif {
   margin: 2.5rem;
+  border-radius: 20px;
 }
 
 .grid-container {
@@ -113,6 +113,14 @@
 .section {
   display: flex;
   width: 100%;
+}
+
+.section.is-black {
+  background-color: black;
+}
+
+.section.is-white {
+  background-color: white;
 }
 
 h1 {
