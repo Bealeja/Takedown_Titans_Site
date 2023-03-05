@@ -41,27 +41,56 @@
   width: auto;
 }
 
-.gif {
+.color-black {
+  color: black;
+}
+
+.frame {
+  border: 10px solid;
+  border-radius: 20px;
+  width: 100%;
+  height: 700px;
+}
+
+.gif-snap {
   margin: 2.5rem;
   border-radius: 20px;
+  border: 20px solid;
+  border-color: yellow;
+}
+
+.gif-insta {
+  margin: 2.5rem;
+  border-radius: 20px;
+  border: 20px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to top left,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
 }
 
 .grid-container {
   display: grid;
-  column-gap: 20px;
-  row-gap: 60px;
   grid-template-columns: auto auto auto auto;
   background-color: white;
-  padding: 5px;
+  border: 10px solid;
+  border-radius: 20px;
+  margin: 2rem;
+  width: 90%;
+  height: 700px;
 }
 
 .grid-item {
   background-color: white;
-  border: 1px solid white;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
-  border-radius: 20px;
   margin: auto;
+  font-family: "Playfair Display", serif;
 }
 .icon {
   margin: auto;
@@ -146,5 +175,87 @@ p {
 .mediaframe {
   display: flex;
   justify-content: center;
-  height: 50%;
+  height: 40%;
+}
+
+/* For the terms and conditions */
+
+.terms-body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.terms-box {
+  max-width: 460px;
+  background-color: black;
+  color: white;
+  font-family: "Playfair Display", serif;
+  padding: 60px 30px;
+}
+
+.terms-text {
+  padding: 0 20px;
+  height: 400px;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+.terms-text::-webkit-scrollbar {
+  width: 2px;
+  background-color: black;
+}
+
+.terms-text::-webkit-scrollbar-thumb {
+  background-color: red;
+}
+
+.terms-text h2 {
+  text-transform: uppercase;
+}
+
+.terms-box h4 {
+  font-size: 13px;
+  text-align: center;
+  padding: 0 40px;
+}
+
+.terms-box h4 span {
+  color: red;
+}
+
+.buttons {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.btn {
+  height: 50px;
+  width: calc(50%-6px);
+  border: 0;
+  border-radius: 6px;
+  font-size: 19px;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+.red-btn {
+  background-color: red;
+}
+
+.gray-btn {
+  background-color: grey;
+}
+
+.btn:hover {
+  opacity: 0.6;
 }
