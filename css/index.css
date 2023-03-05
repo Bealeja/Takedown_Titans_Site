@@ -324,7 +324,6 @@ input[type="submit"]:hover {
   user-select: none;
 }
 
-/* The actual popup */
 .tac .tactext {
   visibility: hidden;
   position: fixed;
@@ -333,7 +332,6 @@ input[type="submit"]:hover {
   z-index: 10;
 }
 
-/* Popup arrow */
 .tac .tactext::after {
   content: "";
   position: fixed;
@@ -342,7 +340,6 @@ input[type="submit"]:hover {
   width: 100%;
 }
 
-/* Toggle this class - hide and show the popup */
 .tac .tacshow {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
@@ -355,7 +352,6 @@ input[type="submit"]:hover {
   animation: fadeIn 1s;
 }
 
-/* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
