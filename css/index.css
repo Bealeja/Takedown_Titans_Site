@@ -259,3 +259,99 @@ p {
 .btn:hover {
   opacity: 0.6;
 }
+
+/* Form */
+.form-body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: darkred;
+}
+
+.form-container {
+  display: flex;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  justify-content: center;
+}
+
+/* Javascript */
+
+.tac {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.tac .tactext {
+  visibility: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+/* Popup arrow */
+.tac .tactext::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+/* Toggle this class - hide and show the popup */
+.tac .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

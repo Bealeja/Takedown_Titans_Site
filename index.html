@@ -7,10 +7,10 @@ Minimum Features:
 -	digital images including a background image (done)
 -	digital video (done)
 -	external widget or app (iframed) (done)
--	copyright, privacy statement, contact, terms and conditions
+-	copyright, privacy statement, contact, terms and conditions (Done)
 Additional features for persona based off user stories:
 -	Announcement Board (CEO/Board Members)
--	Social Media Informatics (marketing)
+-	Get in Contact
 
 -->
 
@@ -21,11 +21,54 @@ Additional features for persona based off user stories:
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
-
+    <script src="./js/index.js"></script>
     <title>Document</title>
   </head>
   <body>
     <div class="body">
+      <div class="tac">
+        <div class="tactext" id="tacid">
+          <div class="terms-body">
+            <div class="terms-box">
+              <div class="terms-text">
+                <h2>Terms of Service</h2>
+                <p>
+                  Acceptance of terms: Users are required to agree to the terms
+                  and conditions before using the website. Intellectual
+                  property: The website owner retains all rights to the content
+                  on the site, including text, images, and videos. Use of
+                  content: Users are permitted to use the content on the website
+                  for personal, non-commercial use only. Reproduction,
+                  modification, or distribution of the content is not allowed
+                  without the website owner's permission. User-generated
+                  content: Users are responsible for any content they post on
+                  the website, and the website owner reserves the right to
+                  remove any content that is deemed inappropriate. Privacy
+                  policy: The website owner should provide a privacy policy that
+                  explains how user data is collected, stored, and used.
+                  Limitation of liability: The website owner is not responsible
+                  for any damages that may result from the use of the website or
+                  its content. Indemnification: Users agree to indemnify the
+                  website owner from any claims or damages resulting from their
+                  use of the website. Governing law: The terms and conditions
+                  should specify the jurisdiction whose laws will govern any
+                  disputes that arise from the use of the website.
+                  Modifications: The website owner reserves the right to modify
+                  the terms and conditions at any time without prior notice.
+                  Termination: The website owner reserves the right to terminate
+                  a user's access to the website at any time, for any reason.
+                </p>
+              </div>
+              <h4>I agree to the Terms of Service</h4>
+              <div class="buttons">
+                <button class="btn red-btn">Accepted</button>
+                <button class="btn gray-btn">Decline</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!--NAV BAR-->
       <div class="container">
         <div class="navbar">
@@ -36,10 +79,11 @@ Additional features for persona based off user stories:
             </a>
             <!--Nav Links-->
             <div class="navbar-start">
-              <a class="navbar-item"> Announcements </a>
+              <a class="navbar-item"> Home </a>
+              <a class="navbar-item"> About Us </a>
               <a class="navbar-item"> Marketing </a>
-              <a class="navbar-item"> Finanace </a>
-              <a class="navbar-item"> FAQ </a>
+              <a class="navbar-item"> Contact Us </a>
+              <a class="navbar-item tac" onclick="myFunction()"> T&C </a>
             </div>
             <div class="navbar-end">
               <a class="button">Login</a>
@@ -136,6 +180,7 @@ Additional features for persona based off user stories:
       <div>
         <div class="section is-white">
           <div class="box">
+            <h1 class="color-black">Social Marketing Stats</h1>
             <div class="grid-container">
               <div class="grid-item"></div>
               <div class="grid-item">
@@ -189,50 +234,53 @@ Additional features for persona based off user stories:
             </div>
           </div>
           <div class="box">
+            <h1 class="color-black">Trending Ads</h1>
             <div class="mediaframe">
-              <img class="gif" src="./assets/gif_1.gif" width="60%" />
+              <img class="gif-insta" src="./assets/gif_1.gif" width="60%" />
             </div>
             <div class="mediaframe">
-              <img class="gif" src="./assets/gif_2.gif" width="60%" />
+              <img class="gif-snap" src="./assets/gif_2.gif" width="60%" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="terms-body">
-      <div class="terms-box">
-        <div class="terms-text">
-          <h2>Terms of Service</h2>
-          <p>
-            Acceptance of terms: Users are required to agree to the terms and
-            conditions before using the website. Intellectual property: The
-            website owner retains all rights to the content on the site,
-            including text, images, and videos. Use of content: Users are
-            permitted to use the content on the website for personal,
-            non-commercial use only. Reproduction, modification, or distribution
-            of the content is not allowed without the website owner's
-            permission. User-generated content: Users are responsible for any
-            content they post on the website, and the website owner reserves the
-            right to remove any content that is deemed inappropriate. Privacy
-            policy: The website owner should provide a privacy policy that
-            explains how user data is collected, stored, and used. Limitation of
-            liability: The website owner is not responsible for any damages that
-            may result from the use of the website or its content.
-            Indemnification: Users agree to indemnify the website owner from any
-            claims or damages resulting from their use of the website. Governing
-            law: The terms and conditions should specify the jurisdiction whose
-            laws will govern any disputes that arise from the use of the
-            website. Modifications: The website owner reserves the right to
-            modify the terms and conditions at any time without prior notice.
-            Termination: The website owner reserves the right to terminate a
-            user's access to the website at any time, for any reason.
-          </p>
-        </div>
-        <h4>I agree to the Terms of Service</h4>
-        <div class="buttons">
-          <button class="btn red-btn">Accepted</button>
-          <button class="btn gray-btn">Decline</button>
-        </div>
+
+    <div class="form-body">
+      <h3>Contact Us!</h3>
+      <div class="form-container">
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Your last name.."
+          />
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+          </select>
+
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
       </div>
     </div>
   </body>
