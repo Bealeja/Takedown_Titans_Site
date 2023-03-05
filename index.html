@@ -25,6 +25,7 @@ Additional features for persona based off user stories:
     <title>Document</title>
   </head>
   <body>
+    <!-- Terms of Conditions -->
     <div class="body">
       <div class="tac">
         <div class="tactext" id="tacid">
@@ -61,9 +62,56 @@ Additional features for persona based off user stories:
               </div>
               <h4>I agree to the Terms of Service</h4>
               <div class="buttons">
-                <button class="btn red-btn">Accepted</button>
-                <button class="btn gray-btn">Decline</button>
+                <button class="btn red-btn" onclick="tacFunction()">
+                  Accepted
+                </button>
+                <button class="btn gray-btn" onclick="tacFunction()">
+                  Decline
+                </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Joining Form -->
+
+      <div class="tac">
+        <div class="tactext" id="formid">
+          <div class="form-body">
+            <div class="form-container">
+              <form action="/action_page.php">
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="firstname"
+                  placeholder="Your name.."
+                />
+
+                <label for="lname">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="lastname"
+                  placeholder="Your last name.."
+                />
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea
+                  id="subject"
+                  name="subject"
+                  placeholder="Write something.."
+                  style="height: 200px"
+                ></textarea>
+
+                <input type="submit" value="Submit" />
+              </form>
             </div>
           </div>
         </div>
@@ -83,7 +131,8 @@ Additional features for persona based off user stories:
               <a class="navbar-item"> About Us </a>
               <a class="navbar-item"> Marketing </a>
               <a class="navbar-item"> Contact Us </a>
-              <a class="navbar-item tac" onclick="myFunction()"> T&C </a>
+              <a class="navbar-item tac" onclick="tacFunction()"> T&C </a>
+              <a class="navbar-item tac" onclick="formFunction()">Join Us!</a>
             </div>
             <div class="navbar-end">
               <a class="button">Login</a>
@@ -243,44 +292,6 @@ Additional features for persona based off user stories:
             </div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="form-body">
-      <h3>Contact Us!</h3>
-      <div class="form-container">
-        <form action="/action_page.php">
-          <label for="fname">First Name</label>
-          <input
-            type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Your name.."
-          />
-
-          <label for="lname">Last Name</label>
-          <input
-            type="text"
-            id="lname"
-            name="lastname"
-            placeholder="Your last name.."
-          />
-
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="australia">Australia</option>
-          </select>
-
-          <label for="subject">Subject</label>
-          <textarea
-            id="subject"
-            name="subject"
-            placeholder="Write something.."
-            style="height: 200px"
-          ></textarea>
-
-          <input type="submit" value="Submit" />
-        </form>
       </div>
     </div>
   </body>
