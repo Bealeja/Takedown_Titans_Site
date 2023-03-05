@@ -263,6 +263,10 @@ p {
 /* Form */
 .form-body {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 0, 0, 0.5);
+  height: 1000px;
 }
 * {
   box-sizing: border-box;
@@ -300,6 +304,8 @@ input[type="submit"]:hover {
   background-color: #f2f2f2;
   padding: 20px;
   justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 /* Javascript */
@@ -331,7 +337,13 @@ input[type="submit"]:hover {
 }
 
 /* Toggle this class - hide and show the popup */
-.tac .show {
+.tac .tacshow {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.tac .formshow {
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
